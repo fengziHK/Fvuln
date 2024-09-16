@@ -1,0 +1,466 @@
+ +-----+---------------------------------+---------------------------------------------------------------------------------+
+ | num |      漏洞模块名                   |                               漏洞简介                                            |
+ +-----+---------------------------------+---------------------------------------------------------------------------------+
+ |  1  | ActiveMQ_weakpwd                |  Check ActiveMQ弱口令                                    
+ |  2  | ActiveMQ_upload                 |  Check ActiveMQ任意文件上传漏洞(CVE-2016-3088)                                    
+ |  3  | cve_2020_13942                  |  Check the Apache Unomi RCE (CVE-2020-13942)                                     
+ |  4  | cas_4_1_rce                     |  Check the Apereo CAS 4.1.5 RCE vuln                                             
+ |  5  | cve_2018_8715                   |  Check the AppWeb Authentication Bypass CVE-2018-8715                            
+ |  6  | aria2_rce                       |  Check the aria2 RCE vuln                                                        
+ |  7  | baota_pma                       |  Check the 宝塔（BaoTa）面板未授权访问phpMyAdmin数据库漏洞                          
+ |  8  | cve_2020_3452                   |  Check the cisco readfile vuln(cve-2020-3452)                                    
+ |  9  | cve_2020_8209                   |  Check the Citrix XenMobile 目录遍历漏洞（CVE-2020-8209）                          
+ | 10  | ClusterEngine_TSCE_RCE          |  Check the 浪潮 ClusterEngineV4.0 任意命令执行漏洞                                
+ | 11  | AfterLogicWebMail_LFI           |  Check the AfterLogicWebMail 任意命令执行漏洞
+ | 12  | coldfusion_file_read            |  Check the Adobe ColdFusion file read vuln (CVE-2010-2861)     
+ | 13  | confluence_ssti                 |  Check the Confluence SSTI CVE-2019-3396 (fileread and RCE)     
+ | 14  | coremail_cnvd201916798          |  Check the coremail vuln (cnvd-2019-16798)                     
+ | 15  | couchdb_user_bypass             |  Check the Couchdb user bypass vuln CVE-2017-12635           
+ | 16  | django_debug_xss                |  Check the Django debug page XSS CVE-2017-12794            
+ | 17  | django_sql_cve20209402          |  Check the Django GIS SQL vuln CVE-2020-9402                
+ | 18  | dlink_cve201917506              |  Check the Dlink vuln (cve-2019-17506)                       
+ | 19  | dlink_dcs_userpass              |  Check the Dlink DCS系列监控账号密码信息泄露漏洞(cve-2020-25078)
+ | 20  | docker_api_rce                  |  Check the docker API unauthorized rce vuln      
+ | 21  | docker_registry_api_unauth      |  Check the docker registry api unauth vuln       
+ | 22  | docker_unauth                   |  Check the Docker unauthorized access       
+ | 23  | draytek_rce_cve20208515         |  Check the draytek 企业级路由器RCE漏洞（CVE-2020-8515）               
+ | 24  | Druid_rce_cve202125646          |  Check the Apache Druid 远程代码执行漏洞（CVE-2021-25646）    
+ | 25  | drupal_cve20196340              |  Check the drupal core restful rce vuln (cve-2019-6340)    
+ | 26  | Drupalgeddon_sql                |  Check the Drupal < 7.32 “Drupalgeddon” SQL注入漏洞（CVE-2014-3704）            
+ | 27  | drupal_cve20187600              |  Check the Drupal Drupalgeddon 2 远程代码执行漏洞（CVE-2018-7600）             
+ | 28  | drupal_cve20176920              |  Check the Drupal Core 8 PECL YAML 反序列化任意代码执行漏洞（CVE-2017-6920）             
+ | 29  | ecology_oa_bsh_rce              |  Check the 泛微e-cology OA系统 Bsh RCE vuln                       
+ | 30  | ecshop_x2_sql                   |  Check the Ecshop 2.x SQL/RCE vuln                   
+ | 31  | ecshop_x3_sql                   |  Check the Ecshop 3.x SQL/RCE vuln    
+ | 32  | EgGate_rce                      |  Check the 锐捷网络 EWEB网管系统RCE vuln (GETSHELL)                 
+ | 33  | Elasticsearch_cve20143120       |  Check the Elasticsearch RCE CVE-2014-3120           
+ | 34  | Elasticsearch_cve20151427       |  Check the Elasticsearch RCE CVE-2015-1427           
+ | 35  | Elasticsearch_cve20153337       |  Check the Elasticsearch arbitrary file read vuln CVE-2015-3337         
+ | 36  | Elasticsearch_cve20155531       |  Check the Elasticsearch arbitrary file read vuln CVE-2015-5531                    
+ | 37  | exchange_ssrf_cve202126855      |  Check the exchange ssrf vuln (cve-2021-26855)        
+ | 38  | Eyou_rce                        |  Check the 亿邮系统RCE漏洞           
+ | 39  | big_f5_rce                      |  Check the BIG_IP F5 RCE Vuln (CVE-2020-5902)            
+ | 40  | cve_2021_22986                  |  Check the BIG_IP F5 SSRF RCE Vuln (CVE-2021-22986)                     
+ | 41  | finereport_LFI                  |  Check the 帆软报表_平台数据迁移插件_未授权任意文件读取                  
+ | 42  | finereport_v9_rce               |  Check the FineReport(帆软) V9 getshell vuln         
+ | 43  | flask_ssti                      |  Check the Flask SSTI Vuln             
+ | 44  | apache_flink_directory_traversal|  Check the apache flink directory traversal vulnerability (CVE-2020-17519)        
+ | 45  | apache_flink_upload_cve202017518|  Check the apache flink upload RCE vulnerability (CVE-2020-17518)    
+ | 46  | fortios_cve201813379            |  Check the Fortinet FortiOS路径遍历漏洞 （CVE-2018-13379）           
+ | 47  | glassfish_file_read             |  Check the Glassfish arbitrary file read vuln     
+ | 48  | crack_glassfish                 |  Check the Glassfish weak password  
+ | 49  | crack_grafana                   |  Check the Grafana weak password           
+ | 50  | hadoop_unauthorized             |  Check the hadoop YARN ResourceManager vuln          
+ | 51  | hikvision_LFI                   |  Check the HIKVISION 流媒体管理服务器后台任意读取                                    
+ | 52  | huawei_ibmc_weakpwd             |  Check the Huawei IBMC 服务器智能管理系统默认密码                                    
+ | 53  | iis_webdav_put                  |  Check the IIS WebDav PUT arbitrary file upload                                    
+ | 54  | influxdb_unauth                 |  Check the influxdb unauthorized access         
+ | 55  | jellyfin_cve202121402           |  Check the Jellyfin任意文件读取漏洞 (CVE-2021-21402)                                 
+ | 56  | jenkins_unauth2rce              |  Check the Jenkins pre-auth RCE chained by CVE-2018-1000861 or CVE-2019-10030000   
+ | 57  | jenkins_user_enumeration        |  Check the Jenkins username enumeration                                            
+ | 58  | joomla_cve20158562              |  Check the Joomla 3.4.5 反序列化漏洞（CVE-2015-8562）                                
+ | 59  | joomla_cve20178917              |  Check the Joomla 3.7.0 (CVE-2017-8917) SQL注入漏洞    
+ | 60  | jupyter_notebook_unauth         |  Check the jupyter notebook unauth and RCE vuln   
+ | 61  | kibana_file_read                |  Check the Kibana file read vuln (CVE-2018-17246)       
+ | 62  | kibana_rce_cve20197609          |  Check the Kibana RCE vuln (CVE-2019-7609)   
+ | 63  | Landray_OA_LFI                  |  Check the 蓝凌OA 任意文件读取漏洞(Landray_OA_LFI)   
+ | 64  | lanproxy_cve20213019            |  Check the lanproxy 目录遍历漏洞 (CVE-2021-3019)   
+ | 65  | UniNAC_upload                   |  Check the 联软准入系统 UniNAC upload vuln      
+ | 66  | nacos_unauth_adduser            |  Check the Alibaba Nacos Unauth and adduser vuln        
+ | 67  | nexus_cve20197238               |  Check the Nexus Repository Manager RCE vuln(cve-2019-7238)    
+ | 68  | nexus_cve202010204              |  Check the Nexus Repository Manager RCE vuln(cve-2020-10204)         
+ | 69  | nexus_cve202011444              |  Check the Nexus 3 Unauthorized Vuln (cve-2020-11444）              
+ | 70  | nexus_weakpwd                   |  Check the Nexus Repository Manager weak password    
+ | 71  | nodejs_cve202121315             |  Check the NodeJS Command Injection vuln cve-2021-21315     
+ | 72  | nodejs_path_cve201714849        |  Check the NodeJS Path-validation vuln (cve-2017-14849)     
+ | 73  | ofbiz_xxe                       |  Check the Apache OFBiz XML External Entity Injection (cve-2018-8033)         
+ | 74  | ofbiz_rce                       |  Check the Apache ofbiz xml deserialization rce vuln(cve-2020-9496)     
+ | 75  | ofbiz_rce_CVE202126295          |  Check the Apache OFBiz RMI deserializes arbitrary code execution (CVE-2021-26295)       
+ | 76  | php_8_1_backdoor                |  Check the PHP 8.1.0-dev 开发版本后门         
+ | 77  | phpmyadmin_setup_rce            |  Check the phpMyAdmin Scripts/setup.php Deserialization Vulnerability     
+ | 78  | phpstudy_backdoor               |  Check the PhpStudy BackDoor For php 5.2.17 and 5.4.45       
+ | 79  | QAX_wangkan_firewall_RCE        |  Check the 奇安信下一代网康防火墙任意命令执行漏洞         
+ | 80  | QAX_360tianqing                 |  Check the 奇安信360天擎越权访问漏洞     
+ | 81  | QAX_360tianqing_sql             |  Check the 奇安信360天擎SQL注入漏洞      
+ | 82  | qizhi_bypass_user               |  Check the 齐治堡垒机某版本任意用户登录漏洞      
+ | 83  | qizhi_rce                       |  Check the 齐治堡垒机前台远程命令执行漏洞（CNVD-2019-20835）         
+ | 84  | rails_cve20195418               |  Check the Ruby On Rails 路径穿越/文件读取漏洞2(CVE-2019-5418)    
+ | 85  | rails_cve20183760               |  Check the Ruby On Rails 路径穿越/文件读取漏洞（CVE-2018-3760）      
+ | 86  | ruijie_RG_UAC_deserialization   |  Check the RuiJie RG-UAC 上网管理审计系统信息泄漏漏洞    
+ | 87  | ruijie_CNVD202114536            |  Check the CNVD-2021-14536 锐捷 RG-UAC 统一上网行为管理审计系统信息泄露漏洞      
+ | 88  | SaltStack_cve202125282          |  Check the SaltStack PUT shell (CVE-2021-25282) vuln         
+ | 89  | sangfor_ad_script_exec_command  |  Check the 深信服 AD4.5 版本下命令执行漏洞     
+ | 90  | sangfor_edr_rce                 |  Check the sangfor EDR RCE Vuln (CNVD-2020-46552)      
+ | 91  | sangfor_edr_user_bypass         |  Check the 深信服 EDR user bypass Vuln     
+ | 92  | seeyou_oa_a8_rce                |  Check the 致远OA-V8 RCE任意文件写入漏洞    
+ | 93  | seeyou_oa_file_upload           |  Check the 致远OA-ajax.do文件上传漏洞      
+ | 94  | seeyou_oa_getemaildata          |  Check the 致远OA getemaildata任意文件读取漏洞         
+ | 95  | seeyou_oa_read                  |  Check the 致远OA NCFindWeb任意文件读取漏洞     
+ | 96  | shiro_CVE20164437               |  Check the Shiro 1.2.4反序列化漏洞（CVE-2016-4437）      
+ | 97  | solr_fileread                   |  Check the apache Solr 任意文件读取漏洞     
+ | 98  | solr_cve20190193                |  Check the apache Solr DataImport Handler RCE (CVE-2019-0193)    
+ | 99  | spring_cve20181273              |  Check the Spring Data Commons RCE vuln（cve-2018-1273）     
+ | 100 | spring_cve20193799              |  Check the Spring Cloud Config目录遍历漏洞（CVE-2019-3799）  
+ | 101 | spring_cve20205410              |  Check the Spring Cloud Config目录遍历漏洞（CVE-2020-5410）      
+ | 102 | thinkadmin_file_read            |  Check the ThinkAdmin v6 未授权列目录、任意文件读取漏洞         
+ | 103 | thinkphp_cve201820062           |  Check the ThinkPHP5 5.0.23 远程代码执行漏洞(CVE-2018-20062)     
+ | 104 | thinkphp_rce                    |  Check the ThinkPHP任意命令执行漏洞1      
+ | 105 | thinkphp_rce2                   |  Check the ThinkPHP任意命令执行漏洞2     
+ | 106 | thinkphp_sql                    |  Check the ThinkPHP Sql注入漏洞   
+ | 107 | tomcat_manager_html_weakpwd     |  Check the Tomcat manager html logon    
+ | 108 | tomcat_put_shell                |  Check the Tomcat PUT RCE CVE-2017-12615        
+ | 109 | tongda_11_6_rce                 |  Check the 通达OA tongda v11.6 RCE vuln    
+ | 110 | tongda_fake_user                |  Check the 通达OA tongda Fake User vuln     
+ | 111 | tongda_unauth_access            |  Check the 通达OA tongda meeting unauthorized access vuln     
+ | 112 | topsec_dlp_user_bypass          |  Check the 天融信 Topsec DLP user bypass Vuln        
+ | 113 | topsec_topapp_lb_nopasswd       |  Check the 天融信负载均衡TopApp-LB系统无需密码直接登陆漏洞    
+ | 114 | topsec_topapp_lb_sql            |  Check the 天融信负载均衡TopApp-LB系统SQL注入漏洞     |
+ | 115 | vbulletin_CVE201916759          |  Check the vBulletin 5.x 未授权远程代码执行漏洞（CVE-2019-16759）     
+ | 116 | vmware_vcenter_rce              |  Check the VMware vCenter RCE vuln (cve-2021-21972)   
+ | 117 | vmware_vcenter_file_read        |  Check the VMware vCenter任意文件读取漏洞    
+ | 118 | coremail_vpn_file_read          |  Check the Coremail VPN file read vuln CNVD-2019-16798       
+ | 119 | fortigate_vpn_fileread          |  Check the Fortigate SSL VPN file read vuln (CVE-2018-13379)    
+ | 120 | PAN_vpn_rce                     |  Check the Pulse Secure SSL VPN任意文件读取漏洞 (CVE-2019-11510)    
+ | 120 | pulse_secure_vpn_fileread       |  Check the 通达OA tongda Fake User vuln     
+ | 121 | sonicwall_sslvpn_8_rce          |  Check the SonicWall SSL-VPN < 8.0.0.4 jarrewrite.sh RCE vuln   
+ | 122 | weaver_oa_sql                   |  Check the 泛微OA V8 SQL注入 vuln      
+ | 123 | weaver_oa_update                |  Check the 泛微OA V8 前台任意文件上传 vuln   
+ | 124 | weaver_read_file                |  Check the 泛微OA云桥未授权任意文件读取漏洞    
+ | 125 | ecshop_cnvd202058823_sql        |  Check the ECShop 4.1.0 前台免登录SQL注入漏洞    
+ | 126 | webmin_rce_cve201915107         |  Check the Webmin 远程命令执行漏洞 (CVE-2019-15107)  
+ | 127 | xenmobile_file_read_cve20208209 |  Check the Xenmobile file read vuln (CVE-2020-8209)    
+ | 128 | xxl_job_rce                     |  Check the xxl-job API接口未授权访问RCE漏洞     
+ | 129 | yongyou_grp_u8_sql              |  Check the 用友 GRP-U8 命令执行漏洞    
+ | 130 | zabbix_weakpwd                  |  Check the Zabbix weak password    
+ | 131 | zhongxin_userpass               |  Check the 中新金盾信息安全管理系统存在默认密码    
+ | 132 | zimbra_xxe2rce_CVE20199670      |  Check the Zimbra XXE to RCE CVE-2019-9670   
+ | 133 | crack_smb                       |  Cracking SMB password (爆破)     
+ | 134 | crack_ssh                       |  Cracking SSH password (爆破)    
+ | 135 | crack_ftp                       |  Cracking FTP password (爆破)    
+ | 136 | crack_mssql                     |  Cracking MSSQL password (爆破)     
+ | 137 | crack_mysql                     |  Cracking MYSQL password (爆破)  
+ | 138 | crack_oracle                    |  Cracking Oracle password (爆破)    
+ | 139 | crack_PostgreSQL                |  Cracking PostgreSQL password (爆破)      
+ | 140 | crack_MongoDB                   |  Check the MongoDB未授权访问漏洞                                 
+ | 141 | crack_Redis                     |  Cracking Redis password (爆破)                                 
+ | 142 | crack_memcached                 |  Check the Memcached未授权访问漏洞                               
+ | 143 | crack_Elasticsearch             |  Check the Elasticsearch未授权访问漏洞
+ | 144 | showdoc_default                 |  Check the showdoc default password vuln
+ | 145 | httpd_cve202141773              |  Check the apache httpd RCE CVE-2021-41773 漏洞（LFI）
+ | 146 | httpd_cve202141773_RCE          |  Check the apache httpd RCE CVE-2021-41773 漏洞（RCE）
+ | 147 | Extmail_sql                     |  Check the ExtMail SQL注入漏洞,可获取任意用户密码
+ | 148 | ThinkCMF_RCE                    |  Check the ThinkCMF任意命令执行漏洞
+ | 149 | alibaba_canal_leak              |  Check the Alibaba Canal 信息泄露漏洞
+ | 150 | confluence_CVE202126084         |  Check the Atlassian Confluence OGNL表达式注入代码执行漏洞（CVE-2021-26084）
+ | 151 | gitlab_cnvd202114193            |  Check the GitLab Graphql邮箱信息泄露漏洞 CNVD-2021-14193
+ | 152 | finereport_v8_fileread          |  Check the 帆软报表FineReport 8.0 任意文件读取漏洞(CNVD-2018-04757)
+ | 153 | flir_ax8_fileread               |  Check the FLIR-AX8 任意文件下载漏洞
+ | 154 | maccms_rce                      |  Check the 苹果CMS RCE漏洞
+ | 155 | phpunit_rce_CVE20179841         |  Check the phpunit 远程代码执行漏洞（CVE-2017-9841)
+ | 156 | shopxo_fileread                 |  Check the ShopXO Download File Read漏洞
+ | 157 | shopxo_weakpass                 |  Check the ShopXO 默认密码漏洞
+ | 158 | VoIPmonitor_rce_CVE202130461    |  Check the VoIPmonitor RCE漏洞(CVE-2021-30461)
+ | 159 | dlink_cve20209376               |  Check the Dlink vuln (cve-2020-9376)
+ | 160 | sangfor_edr_rce1                |  Check the 深信服 EDR RCE Vuln (2020HW)
+ | 161 | Druid_cve202136749              |  Check the Apache Druid任意文件读取漏洞(CVE-2021-36749)
+ | 162 | zyxel_nas_CVE20209054           |  Check the zyxel nas CVE-2020-9054 RCE
+ | 163 | metinfo_LFI                     |  Check the MetInfo CMS任意文件读取漏洞
+ | 164 | yongyou_u8_sql                  |  Check the Yongyou U8 SQL 漏洞
+ | 165 | hexinchuang_upload              |  Check the 和信创天云桌面文件上传漏洞
+ | 166 | DellKACE_SysMgmtApp_RCE         |  Check the Dell Kace K1000 RCE漏洞
+ | 167 | Barco_CVE20193929_RCE           |  Check the Barco/AWIND OEM RCE CVE-2019-3929
+ | 168 | vmware_NSX_RCE                  |  Check the VMware NSX SD-WAN Edge < 3.1.2 RCE漏洞
+ | 169 | skyworth_CVE201912862           |  Check the 天翼创维awifi路由器存在多处未授权访问漏洞
+ | 170 | fenwang_CVE201916313            |  Check the 蜂网互联企业级路由器v4.31密码泄露漏洞 CVE-2019-16313
+ | 171 | gitlab_CVE202122205             |  Check the GitLab 远程命令执行漏洞(CVE-2021-22205)
+ | 172 | Kylin_API_CVE202013937          |  Check the Kylin的未授权配置泄露漏洞(CVE-2020-13937)
+ | 173 | yongyou_nc_BeanShell            |  Check the 用友NC BeanShell RCE漏洞 CNVD-2021-30167
+ | 174 | yongyou_ERP_directory_traversal |  Check the 用友ERP-NC目录遍历漏洞
+ | 175 | cve20181999002                  |  Check the Jenkins任意文件读取漏洞(CVE-2018-1999002)
+ | 176 | vmware_vrealize_api_ssrf        |  Check the VMware vRealize API SSRF vuln (cve-2021-21975)
+ | 177 | resin_LFI                       |  Check the Resin 远程文件读取漏洞
+ | 178 | harbor_CVE201916097             |  Check the Harbor任意管理员注册漏洞(CVE-2019-16097)
+ | 179 | tika_CVE20181335                |  Check the Apache Tika命令注入漏洞(CVE-2018-1335)
+ | 180 | magento_v2_sql                  |  Check the Magento 2.2 SQL注入漏洞
+ | 181 | HP_iLo_CVE201712542             |  Check the iLo独立登录控制台登录绕过漏洞 CVE-2017-12542
+ | 182 | dlink_DSL2750u_FileDisc         |  Check the D-Link 2750u/2730u 任意文件读取
+ | 183 | TOTOLINK_RCE                    |  Check the TOTOLINK路由器后门和远程代码执行漏洞
+ | 184 | langhai_down                    |  Check the 蓝海卓越计费管理系统任意文件下载漏洞
+ | 185 | SiteServer_down_getshell        |  Check the SiteServer CMS远程模板下载导致Getshell漏洞
+ | 186 | CatfishCMS_CNVD201906255        |  Check the CatfishCMS远程命令执行漏洞（CNVD-2019-06255）
+ | 187 | ZenTao_11_RCE                   |  Check the 禅道11.6RCE漏洞
+ | 188 | airflow_unauth                  |  Check the Airflow 未授权访问漏洞
+ | 189 | alibaba_canal_default_password  |  Check the alibaba Canal 默认密码漏洞
+ | 190 | amtt_hiboss_rce                 |  Check the 安美数字酒店宽带运营系统RCE漏洞
+ | 191 | Jira_Unauth_User                |  Check the Jira Unauthenticated User Picker漏洞
+ | 192 | qisicms_sql_1                   |  Check the 74cms SQL漏洞1
+ | 193 | qisicms_sql_2                   |  Check the 74cms SQL漏洞2
+ | 194 | qisicms_sql_3                   |  Check the 74cms SQL漏洞3
+ | 195 | apache_nifi_api_rce             |  Check the Apache Nifi API RCE漏洞
+ | 196 | ambari_default_password         |  Check the Ambari 默认账户密码漏洞
+ | 197 | httpd_cve202140438_ssrf         |  Check the apache httpd cve-2021-40438 SSRF 漏洞
+ | 198 | apache_nifi_api_unauth          |  Check the Apache Nifi API 未授权访问漏洞
+ | 199 | storm_unauthorized              |  Check the Apache storm unauthorized access 漏洞
+ | 200 | aspcms_backend_leak             |  Check the aspcms backend leak 漏洞
+ | 201 | Cacti_weathermap_file_write     |  Check the Cacti weathermap插件任意文件写入漏洞
+ | 202 | Cacti_Unauth_RCE                |  Check the Cacti v1.2.8 Unauthenticated RCE漏洞（CVE-2020-8813）
+ | 203 | chinaunicom_default_password    |  Check the chinaunicom modem 默认密码漏洞
+ | 204 | cve_2019_19781                  |  Check the Citrix ADC RCE漏洞（CVE-2019-19781）
+ | 204 | cve_2020_8191                   |  Check the Citrix XSS漏洞（cve-2020-8191）
+ | 205 | cve_2020_8193                   |  Check the Citrix ADC漏洞（cve-2020-8193）
+ | 206 | grafana_LFI                     |  Check the Grafana 任意文件读取漏洞 (2021 0day)
+ | 207 | confluence_cve20158399          |  Check the Atlassian Confluence敏感信息泄露漏洞（cve-2015-8399）
+ | 208 | confluence_cve202126085         |  Check the Atlassian Confluence文件读取漏洞（CVE-2021-26085）
+ | 209 | consul_rexec_rce                |  Check the Hashicorp Consul rexec RCE vuln
+ | 210 | consul_service_rce              |  Check the Hashicorp Consul service RCE vuln
+ | 211 | couchcms_cve20187662            |  Check the couchcms cve-2018-7662 vuln
+ | 212 | couchdb_unauth                  |  Check the Couchdb unauth vuln
+ | 213 | craftcms_cve20209757            |  Check the craftcms seomatic cve-2020-9757 rce vuln
+ | 214 | dahua_bypass_cve202133044       |  Check the Dahua authentication bypass vuln cve-2021-33044
+ | 215 | datang_cnvd202104128            |  Check the 大唐电信AC集中管理平台弱口令漏洞cnvd-2021-04128
+ | 216 | xunchi_cnvd202023735            |  Check the xunchi file read vuln cnvd-2020-23735
+ | 217 | dedecms_cve20186910             |  Check the dedecms 5.7 vuln cve-2018-6910
+ | 218 | dedecms_carbuyaction_fileinclude|  Check the dedecms v5.6 carbuyaction fileinclude vuln
+ | 219 | dedecms_cve20187700_rce         |  Check the dedecms cve-2018-7700 rce vuln
+ | 220 | dedecms_url_redirection         |  Check the dedecms URL下载重定向漏洞
+ | 221 | guestbook_sqli                  |  Check the dedecms 5.7 guestbook.php SQL vuln
+ | 222 | dedecms_membergroup_sqli        |  Check the dedecms membergroup sqli vuln
+ | 223 | duomicms_sqli                   |  Check the duomicms<3.0 sqli vuln
+ | 224 | DVR_CVE20189995                 |  Check the DVR CVE-2018-9995 vuln
+ | 225 | dlink_850l_info_leak            |  Check the D-Link 850L 远程敏感信息读取vuln
+ | 226 | dlink_dsl_2888a_rce             |  Check the D-Link DSL 2888a RCE Vuln（CVE-2020-24581）
+ | 227 | dotnetcms_sqli                  |  Check the 风讯(foosun)CMS .net版本 SQL注入漏洞
+ | 228 | Druid_monitor_unauth            |  Check the Druid monitor unauth 漏洞
+ | 229 | dubbo_admin_default             |  Check the Dubbo Admin管理控制台默认密码漏洞
+ | 230 | Ezkeco_cnvd202057264_readfile   |  Check the e-zkeco read file vuln (cnvd-2020-57264)
+ | 231 | ecology_arbitrary_file_upload   |  Check the 泛微OA v9 前台文件上传漏洞
+ | 232 | ecology_oa_filedownload         |  Check the 泛微OA 前台文件下载漏洞
+ | 233 | ecology_spring_directory        |  Check the 泛微OA springframework directory traversal漏洞
+ | 234 | ecology_syncuserinfo_sqli       |  Check the 泛微OA syncuserinfo SQL注入漏洞
+ | 235 | ecology_v8_sqli                 |  Check the 泛微OA V8 前台SQL注入漏洞
+ | 236 | ecology_validate_sqli           |  Check the 泛微OA validate.jsp SQL注入漏洞
+ | 237 | ecology_workflowcentertreedata  |  Check the 泛微OA workflowcentertreedata SQL注入漏洞
+ | 238 | EEA_cnvd202110543               |  Check the EEA 企业邮件归档管理系统信息泄露漏洞 cnvd-2021-10543
+ | 239 | ecshop_collection_list_sqli     |  Check the Ecshop collection list sqli vuln
+ | 240 | etouch_v2_sql                   |  Check the Ectouch v2 SQL注入漏洞
+ | 241 | exchange_xss_cve202141349       |  Check the exchange xss vuln (cve-2021-41349)
+ | 242 | fangweicms_sqli                 |  Check the fangweicms v4.3 sql注入漏洞
+ | 243 | feifeicms_LFI                   |  Check the feifeicms后台任意文件读取漏洞
+ | 244 | Finecms_sqli                    |  Check the FineCMS 5.0.10 SQL注入漏洞
+ | 245 | finereport_directory            |  Check the 帆软报表_finereport directory traversal漏洞
+ | 246 | flexpaper_cve201811686          |  Check the flexpaper cve-2018-11686 漏洞
+ | 247 | frp_unauth                      |  Check the frp 未授权访问与默认密码漏洞
+ | 248 | gateone_cve202035736            |  Check the GateOne 任意文件读取漏洞（cve-2020-35736）
+ | 249 | gilacms_sqli                    |  Check the gilacms 1-11-8 admin SQL注入漏洞(cve-2020-5515)
+ | 250 | gitlab_ssrf_cve202122214        |  Check the GitLab ssrf cve-2021-22214 漏洞
+ | 251 | gitlist_rce_cve20181000533      |  Check the gitlist 0.6.0 远程命令执行漏洞（CVE-2018-1000533）
+ | 252 | gocd_cve202143287               |  Check the GoCD任意文件读取漏洞 (CVE-2021-43287)
+ | 253 | go_pprof_leak                   |  Check the Go pprof 泄漏漏洞
+ | 254 | h2database_web_unauthor         |  Check the H2 Database WEB Console 未授权访问漏洞
+ | 255 | h3c_imc_rce                     |  Check the H3C IMC dynamiccontent.properties.xhtm 远程命令执行
+ | 256 | h3c_secparh_userlogin           |  Check the H3C SecParh堡垒机 get_detail_view.php任意用戶登录漏洞
+ | 257 | h5s_cnvd202067113_unauth        |  Check the H5S CONSOLE 未授权访问漏洞(CNVD-2020-67113)
+ | 258 | hanming_video_fileread          |  Check the 银澎云计算 好视通视频会议系统任意文件下载漏洞
+ | 259 | hikvision_info_leak             |  Check the HIKVISION /config/user.xml 信息泄漏
+ | 260 | hikvision_default_password      |  Check the HIKVISION 群组对讲服务配置平台存在弱口令漏洞
+ | 261 | hjtcloud_file_leak              |  Check the 中创视迅 会捷通云视讯 list 目录文件泄露漏洞
+ | 262 | hjtcloud_arbitrary_fileread     |  Check the 中创视迅 会捷通云视讯 fileDownload 任意文件读取漏洞
+ | 263 | huawei_gateway_hg659_fileread   |  Check the 华为hg659家庭网关存在任意文件读取漏洞
+ | 264 | hikvision_cve202136260          |  Check the HIKVISION 海康威视产品命令注入漏洞(CVE-2021-36260)
+ | 265 | IIS_put_getshell                |  Check the IIS PUT Getshell vuln
+ | 266 | inspur_tscev4_cve202021224      |  Check the inspur tscev4 rce vuln (cve-2020-21224)
+ | 267 | jboss_unauth                    |  Check the Jboss 未授权访问漏洞
+ | 268 | jboss_cve20101871               |  Check the Jboss RCE漏洞 (cve-2010-1871)
+ | 269 | jeewms_showordownbyurl_fileread |  Check the jeewms showordownbyurl 文件读取漏洞
+ | 270 | jellyfin_cve202129490           |  Check the Jellyfin RemoteImageController.cs SSRF漏洞 CVE-2021-29490
+ | 271 | jetty_cve202128164              |  Check the Jetty WEB-INF 敏感信息泄露漏洞（CVE-2021-28164）
+ | 272 | jinher_oa_default_pass          |  Check the 金和OA C6 管理员默认口令
+ | 273 | Jira_cve20198442                |  Check the Jira 未授权敏感信息泄露漏洞（CVE-2019-8442）
+ | 274 | Jira_cve20198449                |  Check the Jira 未授权敏感信息泄露漏洞（CVE-2019-8449）
+ | 275 | Jira_cve202014179               |  Check the Jira 信息泄露漏洞（cve-2020-14179）
+ | 276 | Jira_cve202014181               |  Check the Jira /ViewUserHover.jspa 信息泄露漏洞（cve-2020-14181）
+ | 277 | Jira_cve201911581               |  Check the Jira 模板注入漏洞（cve-2019-115811）
+ | 278 | Jira_ssrf_cve20198451           |  Check the Jira 未授权SSRF漏洞（cve-2019-8451）
+ | 279 | joomla_component_sql            |  Check the Joomla component vreview SQL注入漏洞
+ | 280 | joomla_346_rce                  |  Check the Joomla! 3.4.6 'configuration.php' RCE漏洞
+ | 281 | joomla_cve20157297_sql          |  Check the Joomla SQL注入漏洞（cve-2015-7297）
+ | 282 | spring_cve202222947             |  Check the Spring Cloud Gateway RCE漏洞（CVE-2022-22947）
+ | 283 | joomla_cve20187314_sql          |  Check the Joomla CVE-2018-7314 SQL注入漏洞
+ | 284 | joomla_cve20186605_sql          |  Check the Joomla CVE-2018-6605 SQL注入漏洞
+ | 285 | jumpserver_unauth               |  Check the JumpServer未授权RCE漏洞
+ | 286 | kafka_manager_unauth            |  Check the kafka manager unauth vuln
+ | 287 | spring_function_SpEL_RCE        |  Check the spring cloud function SpEL RCE漏洞
+ | 288 | Oracle_CVE202135587             |  Check the Oracle Access Manager反序列化漏洞(CVE-2021-35587)
+ | 289 | kibana_unauth                   |  Check the Kibana 未授权访问漏洞
+ | 290 | kingdee_directory_traversal     |  Check the 金蝶OA server_file 目录遍历漏洞
+ | 291 | kingsoft_v8_default_passwd      |  Check the kingsoft(金山) v8 默认密码漏洞
+ | 292 | kingsoft_v8_fileread            |  Check the kingsoft(金山) v8 文件读取漏洞
+ | 293 | kong_cve202011710_unauth        |  Check the API网关 Kong 未授权访问漏洞(CVE-2020-11710)
+ | 294 | kubernetes_unauth               |  Check the kubernetes 未授权访问漏洞
+ | 295 | kyan_password_leakage           |  Check the Kyan 网络监控设备账号密码泄露漏洞
+ | 296 | metinfo_sql1                    |  Check the Metinfo 5.3.17 X-Rewrite-url SQL注入漏洞
+ | 297 | yongyou_A6_directory_traversal  |  Check the 用友A6 createMysql.jsp 数据库敏感信息泄露漏洞
+ | 298 | spring_core_RCE                 |  Check the Spring Core RCE漏洞
+ | 299 | maccms_backdoor                 |  Check the 苹果CMS v10 后门漏洞
+ | 300 | laravel_cve20213129             |  Check the Laravel Ignition 2.5.1 代码执行漏洞（CVE-2021-3129）
+ | 301 | laravel_info_leak               |  Check the Laravel debug info-leak vuln
+ | 302 | laravel_improper_webdir         |  Check the Laravel improper webdir vuln
+ | 303 | metinfo_LFI_cnvd201813393       |  Check the MetInfo CMS任意文件读取漏洞(cnvd-2018-13393)
+ | 304 | metinfo_cve201917418            |  Check the MetInfo SQLi vuln (cve-2019-17418)
+ | 305 | metinfo_cve201916997            |  Check the MetInfo SQLi vuln (cve-2019-16997)
+ | 306 | metinfo_cve201916996            |  Check the MetInfo SQLi vuln (cve-2019-16996)
+ | 307 | minio_default_passwd            |  Check the Minio 默认密码漏洞
+ | 308 | mongo_cve201910758              |  Check the mongo-express RCE vuln (cve-2019-10758)
+ | 309 | mpsec_fileread                  |  Check the mpsec isg1000 file-read vuln
+ | 310 | msvod_sqli                      |  Check the msvod sqli vuln
+ | 311 | myucms_LFR                      |  Check the myucms load file read vuln
+ | 312 | nagio_cve201810735              |  Check the nagio commandline.php SQLi vuln (cve-2018-10735)
+ | 313 | nagio_cve201810736              |  Check the nagio info.php SQLi vuln (cve-2018-10736)
+ | 314 | nagio_cve201810737              |  Check the nagio logbook.php SQLi vuln (cve-2018-10737)
+ | 315 | nagio_cve201810738              |  Check the nagio menuaccess.php SQLi vuln (cve-2018-10738)
+ | 316 | natshell_fileread               |  Check the 蓝海卓越计费管理系统 download.php 任意文件读取 vuln
+ | 317 | QAX_wangkan_default_passwd      |  Check the 奇安信下一代网康互联网控制网关ns-icg存在弱口令漏洞
+ | 318 | netgear_cve20175521             |  Check the netgear 认证绕过漏洞 （cve-2017-5521）
+ | 319 | nexus_cve202010199              |  Check the Nexus 远程命令执行漏洞 (cve-2020-10199）
+ | 320 | nexusdb_cve202024571            |  Check the nexusdb path traversal vuln (cve-2020-24571)
+ | 321 | nhttpd_cve201916278             |  Check the Nostromo httpd RCE vuln (cve-2019-16278)
+ | 322 | NodeRED_cve20213223             |  Check the Node-RED ui_base file-read vuln (cve-2021-3223)
+ | 323 | noVNC_cve20213654               |  Check the noVNC url redirection vuln (cve-2021-3654)
+ | 324 | nps_default_passwd              |  Check the nps default password vuln
+ | 325 | QAX_wangkan_NS_fileread         |  Check the 网康 NS-ASG安全网关 任意文件读取漏洞
+ | 326 | nsfocus_uts_passwd_leak         |  Check the nsfocus uts password leak vuln
+ | 327 | nuuo_file_inclusion             |  Check the nuuo file inclusion vuln
+ | 328 | odoo_file_read                  |  Check the odoo file read vuln
+ | 329 | openfire_cve201918394           |  Check the openfire ssrf vuln (cve-2019-18394)
+ | 330 | panabit_default_password        |  Check the panabit gateway default password vuln
+ | 331 | panabit_ixcache_default_passwd  |  Check the panabit ixcache gateway default password vuln
+ | 332 | phpcms_cve201819127             |  Check the phpcms cve-2018-19127 vuln
+ | 333 | php_cve20121823                 |  Check the PHP cgi cve-2012-1823 vuln
+ | 334 | pentaho_cve202131602            |  Check the pentaho authentication bypass vuln (cve-2021-31602)
+ | 335 | pbootcms_database_download      |  Check the pbootcms database file download vuln
+ | 336 | phpmyadmin_cve201812613         |  Check the phpmyadmin file inclusion Vuln (cve-2018-12613)
+ | 337 | phpok_sqli                      |  Check the Phpok SQLi vuln
+ | 338 | opentsdb_cve202035476_rce       |  Check the OpenTSDB RCE vuln（CVE-2020-35476）
+ | 339 | pandorafms_cve201920224         |  Check the PandoraFMS v7.0NG authenticated RCE vuln (CVE-2019-20224)
+ | 340 | phpshe_sqli                     |  Check the phpshe SQLi vuln
+ | 341 | powercreator_fileupload         |  Check the PowerCreator CMS arbitrary file upload vuln
+ | 342 | prometheus_cve202129622         |  Check the prometheus url redirection vuln (cve-2021-29622)
+ | 343 | pulse_cve201911510              |  Check the Pulse Secure SSL VPN File Read (CVE-2019-11510)
+ | 344 | pyspider_unauthor               |  Check the Pyspider webui unauthorized-access vuln
+ | 345 | qibocms_sqli                    |  Check the qibocms SQLi vuln
+ | 346 | qilin_bastion_rce               |  Check the 中远麒麟iAudit运维审计系统未授权远程命令执行漏洞
+ | 347 | qnap_cve20197192                |  Check the qnap vuln (cve-2019-7192)
+ | 348 | rabbitmq_default_passwd         |  Check the rabbitmq default password vuln
+ | 349 | razor_cve20188770               |  Check the Cobub Razor 0.8.0 Physical path Leakage Vuln
+ | 350 | rconfig_cve201916663            |  Check the rConfig v3.9.2 unauth RCE vuln (CVE-2019-16663)
+ | 351 | resin_cnnvd200705315            |  Check the Resin 多个远程信息泄露漏洞(CNNVD-200705-315)
+ | 352 | resin_fileread                  |  Check the Resin viewfile LFI vuln
+ | 353 | rockmongo_default_passwd        |  Check the rockmongo default password vuln
+ | 354 | ruijie_EG_cli_rce               |  Check the RuiJie EG cli.php RCE vuln
+ | 355 | ruijie_EG_branch_passw_rce      |  Check the RuiJie EG branch_passw.php RCE vuln
+ | 356 | ruijie_EG_download_fileread     |  Check the RuiJie EG download.php file read vuln
+ | 357 | ruijie_EG_info_leak             |  Check the RuiJie EG info leak vuln
+ | 358 | ruijie_EG_phpinfo_view          |  Check the RuiJie EG phpinfo.view.php info vuln
+ | 359 | ruijie_yunketang_Directory      |  Check the RuiJie yunketang Directory traversal vuln
+ | 360 | ruijie_eweb_rce                 |  Check the RuiJie EWEB RCE vuln (cnvd-2021-09650)
+ | 361 | ruijie_nbr1300g_cli_passwdleak  |  Check the RuiJie nbr1300g cli password leak vuln
+ | 362 | ruoyi_management_fileread       |  Check the 若依(RuoYi) management fileread vuln
+ | 363 | SaltStack_cve202125281          |  Check the SaltStack 命令注入漏洞 (CVE-2021-25281)
+ | 364 | samsung_wea453e_default         |  Check the samsung router wlan-ap wea453e default passwd vuln
+ | 365 | samsung_wea453e_rce             |  Check the samsung router wea453e rce vuln
+ | 366 | samsung_wea453e_wlanap_rce      |  Check the samsung router WLAN AP WEA453e RCE vuln
+ | 367 | sangfor_ba_rce                  |  Check the 深信服 行为感知系统 c.php 远程命令执行漏洞
+ | 368 | satellian_cve20207980           |  Check the satellian RCE vuln (cve-2020-7980)
+ | 369 | seacms_v6_rce                   |  Check the Seacms 6.54&6.55 RCE vuln
+ | 370 | seacms_before_v992_rce          |  Check the Seacms <= 9.92 RCE Getshell vuln
+ | 371 | seacms_sqli                     |  Check the Seacms V8.7 SQLi vuln
+ | 372 | seacms_v654_rce                 |  Check the Seacms v6.54 RCE vuln
+ | 373 | seacms_v654_command             |  Check the Seacms v654 command exec vuln
+ | 374 | secnet_ac_default               |  Check the secnet ac default password vuln
+ | 375 | seeyou_a6_infoleak              |  Check the 致远OA A6 info leak vuln
+ | 376 | seeyou_cnvd202062422            |  Check the 致远OA readfile vuln (cnvd-2020-62422)
+ | 377 | seeyou_cookieleak               |  Check the 致远OA cookie leak vuln
+ | 378 | seeyou_sessionleak              |  Check the 致远OA session leak vuln
+ | 379 | seeyou_sqli                     |  Check the 致远OA wooyun 2015-0108235 sqli vuln
+ | 380 | shiziyu_apicontroller_sqli      |  Check the shiziyu cms apicontroller SQLi vuln
+ | 381 | cve_2022_1388                   |  Check the BIG_IP F5 iControl REST RCE Vuln (CVE-2022-1388)
+ | 382 | showdoc_uploadfile              |  Check the showdoc uploadfile vuln
+ | 383 | skywalking_CVE20209483          |  Check the skywalking sqli vuln (cve-2020-9483)
+ | 384 | solarwinds_cve202010148         |  Check the SolarWinds Orion API RCE vuln (cve-2020-10148)
+ | 385 | solr_cve201712629               |  Check the apache Solr cve-2017-12629 XXE vuln
+ | 386 | solr_velocity_rce               |  Check the apache Solr Velocity Custom Template (CVE-2019-17558)
+ | 387 | sonarqube_cve202027986          |  Check the sonarqube unauth vuln (cve-2020-27986)
+ | 388 | spark_api_unauth                |  Check the spark api unauth vuln
+ | 389 | spark_webui_unauth              |  Check the spark webui unauth vuln
+ | 390 | spon_intercom_fileread          |  Check the spon-ip intercom file read vuln
+ | 391 | spon_intercom_pingrce           |  Check the spon-ip intercom ping rce vuln
+ | 392 | spring_cve20205405              |  Check the spring cloud config server vuln（CVE-2020-5405）
+ | 393 | spring_cve20164977              |  Check the Spring Security OAuth2 RCE Vuln(CVE-2016-4977)
+ | 394 | springboot_env_unauth           |  Check the springboot env unauth Vuln
+ | 395 | supervisord_cve201711610        |  Check the Supervisord RCE vuln (CVE-2017-11610)
+ | 396 | tamronos_iptv_rce               |  Check the TamronOS IPTV RCE vuln
+ | 397 | telecom_gateway_default         |  Check the Telecom gateway default password vuln
+ | 398 | tensorboard_unauth              |  Check the TensorBoard unauth vuln
+ | 399 | terramaster_cve202015568        |  Check the TerraMaster OS exportUser.php RCE vuln(cve-2020-15568)
+ | 400 | terramaster_cve202028188        |  Check the TerraMaster TOS RCE vuln(cve-2020-28188)
+ | 401 | ThinkCMF_lfi                    |  Check the ThinkCMF 任意内容包含漏洞
+ | 402 | thinkphp_v6_filewrite           |  Check the ThinkPHP v6 file write vuln
+ | 403 | tomcat_cve201811759             |  Check the Tomcat CVE-2018-11759 vuln
+ | 404 | tongda_user_session             |  Check the 通达OA v11.7 在线用户登录漏洞
+ | 405 | tpshop_directory                |  Check the TPshop directory traversal vuln
+ | 406 | tpshop_sqli                     |  Check the TPshop <3.0 SQLi vuln
+ | 407 | tvt_nvms_cve201920085           |  Check the TVT NVMS 1000 file read vuln(cve-2019-20085)
+ | 408 | typecho_rce                     |  Check the typecho < 1.1(17.10.24) RCE vuln
+ | 409 | ueditor_fileupload              |  Check the UEditor .Net file upload vuln (cnvd-2017-20077)
+ | 410 | uwsgi_cve20187490               |  Check the uWSGI PHP Directory Traversal Vuln (CVE-2018-7490)
+ | 411 | vmware_vcenter_cve202121985     |  Check the VMware vCenter RCE vuln (cve-2021-21985)
+ | 412 | weblogic_ssrf                   |  Check the weblogic SSRF Vuln
+ | 413 | weblogic_cve202014750           |  Check the weblogic CVE-2020-14750 Vuln
+ | 414 | weblogic_cve201710271           |  Check the weblogic CVE-2017-10271 Vuln
+ | 415 | weiphp_sqli                     |  Check the weiphp<=5.0 SQLi Vuln
+ | 416 | weiphp_path_traversal           |  Check the weiphp path traversal Vuln (CNVD-2020-68596)
+ | 417 | wifisky_cnvd202139012           |  Check the wifisky default password vuln (cnvd-2021-39012)
+ | 418 | wordpress_cve201919985          |  Check the wordpress Email Subscribers File Down vuln (cve-2019-19985)
+ | 419 | wordpress_cve201914205          |  Check the wordpress ext adaptive images LFI vuln (CVE-2019-14205)
+ | 420 | wuzhicms_v410_sqli              |  Check the wuzhicms v4.1.0 sms_check.php SQLi vuln
+ | 421 | xdcms_sqli                      |  Check the XDCMS SQLi vuln
+ | 422 | xiuno_cvnd201901348             |  Check the Xiuno BBS reinstallation vuln(cvnd-2019-01348)
+ | 423 | yccms_v3_rce                    |  Check the YCCMS v3.3 RCE vuln
+ | 424 | yapi_rce                        |  Check the Yapi RCE vuln
+ | 425 | yongyou_nc6_file_upload         |  Check the 用友nc 6.5 文件上传漏洞
+ | 426 | youphptube_cve20195127          |  Check the youphptube encoder cve-2019-5127 vuln
+ | 427 | youphptube_cve20195128          |  Check the youphptube encoder cve-2019-5128 vuln
+ | 428 | youphptube_cve20195129          |  Check the youphptube encoder cve-2019-5129 vuln
+ | 429 | yungoucms_sqli                  |  Check the yungoucms sqli vuln
+ | 430 | confluence_cve202226134         |  Check the Atlassian Confluence RCE漏洞（CVE-2022-26134）
+ | 431 | zabbix_auth                     |  Check the zabbix authentication bypass vuln
+ | 432 | zabbix_cve201610134             |  Check the zabbix latest.php SQLi vuln(CVE-2016-10134)
+ | 433 | zcms_v3_sqli                    |  Check the ZCMS v3.0 SQLi vuln
+ | 434 | zeit_cve20205284                |  Check the ZEIT Next.js directory traversal vuln(cve-2020-5284)
+ | 435 | zeroshell_cve201912725          |  Check the ZeroShell 3.9.0 RCE vuln(CVE-2019-12725)
+ | 436 | zzcms_zsmanage_sqli             |  Check the ZZCMS201910 zsmanage SQLi vuln
+ | 437 | shiziyu_apigoodsController_sqli |  Check the shiziyu cms ApigoodsController.class.php SQLi vuln
+ | 438 | jinher_oa_file_read             |  Check the 金和OA C6 download.jsp 任意文件读取漏洞
+ | 439 | Alibaba_Accesskey_Leak          |  Check the Alibaba Canal Accesskey Information Leakage vuln
+ | 440 | ICEFlow_vpn_Information_Leak    |  Check the CEFlow VPN Information Leakage vuln
+ | 441 | bullwark_momentum_lfi           |  Check the Bullwark Momentum Series JAWS 1.0 LFI vuln
+ | 442 | cisco_cve20191653               |  Check the Cisco readfile vuln(cve-2020-3452)
+ | 443 | sap_cve201712637                |  Check the SAP NetWeaver path traversal vuln (cve-2017-12637)
+ | 444 | sap_cve20206287                 |  Check the SAP NetWeaver AS JAVA vuln (CVE-2020-6287)
+ | 445 | idrac_weak_passwd               |  Check the DELL idrac weak passwd vuln
+ | 446 | sharepoint_cve20201147          |  Check the sharepoint RCE vuln (cve-2020-1147)
+ | 447 | LionfishCMS_ApiController_SQL   |  Check the 狮子鱼CMS ApiController.class.php SQL注入漏洞
+ | 448 | LionfishCMS_Apigoods_SQL        |  Check the 狮子鱼CMS ApigoodsController.class.php SQL注入漏洞
+ | 449 | kingsoft_pdf_maker_RCE          |  Check the kingsoft 金山 V8 终端安全系统 pdf_maker.php 命令执行漏洞
+ | 450 | weblogic_RCE_CVE202014882       |  Check the Weblogic CVE-2020-14882 RCE Vuln
+ | 451 | IceWarp_WebClient_RCE           |  Check the IceWarp WebClient Basic RCE vuln
+ | 452 | Duoke_Default_passwd            |  Check the Duoke-Web-Server 存在默认密码 admin/admin
+ | 453 | zhongqingnabo_info              |  Check the zhongqingnabo 信息泄露漏洞
+ | 454 | cisco_Read_Only                 |  Check the Cisco Read-Only Path Traversal Vuln
+ | 455 | omigod_CVE202138647             |  Check the OMI RCE vuln (CVE_2021_38647)
+ | 456 | huayu_reporter_rce              |  Check the 华域Reporter assembly RCE vuln
+ | 457 | Aviatrix_CVE202140870           |  Check the Aviatrix Controller RCE vuln (CVE_2021_40870)
+ | 458 | Metabase_cve202141277           |  Check the Metabase 任意文件读取漏洞（CVE-2021-41277）
+ | 459 | ecology_cnvd202149104           |  Check the 泛微E-Office文件上传漏洞（CNVD-2021-49104）
+ | 460 | beescms_sqli                    |  Check the beescms XFF注入漏洞
+ +---------------------------------------+----------------------------------------------------------------+
